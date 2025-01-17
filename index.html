@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dom 1</title>
 
-    
+  
     <div id="content"> change this text</div>
-    <button onclick="alert('hello world')">click</button>
+    <button onclick="changeText()">click</button>
 
 
   
@@ -20,10 +20,9 @@
     <input type="text" id="fruitInput" placeholder="Fruits name" />
     <button id="addFruitBtn">Moore Fruits</button>
 
-    
-
     <input type="text" />
     <div id="displayText"></div>
+  
 
     
    
@@ -35,11 +34,10 @@ Kirjoita JavaScript-koodi, joka valitsee sisällön tunnuksen käyttämällä ge
 Kirjoita funktio, joka päivittää valitun elementin tekstisisällön painamalla nappia tekstiksi "Hei, maailma!".
 */
 
-const changeText = () => {
-  const textPlacement = document.getElementById('content');
-  textPlacement.textContent = 'hello world!';
+let changeText = () => {
+let  textPlacement = document.getElementById('content');
+  textPlacement.textContent = 'hello world';
 };
-
 
 
 /* 
@@ -91,15 +89,15 @@ Tapahtumankäsittelijän funktion tulisi:
 - Päivitä displayText <div>:n textContent vastaamaan syötekentän arvoa.
 - Saadaksesi näytön päivittymään dynaamisemmin (käyttäjän kirjoittaessa), harkitse input-tapahtuman käyttämistä change-tapahtuman sijasta tai sen lisäksi. */
 
-const input = document.querySelector('input');
 
-const liveTyping = () => {
-  const displayArea = document.querySelector('#displayText');
+let input = document.querySelector('input');
+
+let liveTyping = () => {
+let displayArea = document.querySelector('#displayText');
   displayArea.textContent = input.value;
 };
 
 input.addEventListener('input', liveTyping);
-
  
     
       
